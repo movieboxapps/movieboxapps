@@ -1,15 +1,17 @@
-````markdown
 <div align="center">
 
-<img src="assets/banner.png" alt="MovieBox Banner" width="100%" />
+<img src="./assets/banner.png" alt="MovieBox Banner" width="100%" />
 
 # 🎬 MovieBox Web Experience
 
-### Premium Streaming Platform Interface • Modern UI • Responsive Design
+### Premium Entertainment Platform UI • Responsive Design • Modern Web Experience
 
-[![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)]()
-[![Version](https://img.shields.io/badge/Version-Latest-orange?style=for-the-badge)]()
-[![License](https://img.shields.io/badge/License-Private-black?style=for-the-badge)]()
+<br>
+
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-2026-orange?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-Web-black?style=for-the-badge)
+![Built With](https://img.shields.io/badge/Built%20With-Google%20AI%20Studio-blue?style=for-the-badge)
 
 </div>
 
@@ -17,44 +19,42 @@
 
 # 📖 Overview
 
-MovieBox Web Experience is a modern entertainment-focused web application designed with performance, usability, and responsive design in mind.
+MovieBox Web Experience is a modern entertainment-focused web project designed with a strong emphasis on user experience, responsive layouts, clean visual hierarchy, and performance.
 
-The project focuses on delivering a clean, premium user interface, intuitive navigation, and a smooth browsing experience across desktop, tablet, and mobile devices.
+The project demonstrates a premium interface for browsing entertainment content while following modern web design principles. Every section is designed to provide a smooth and intuitive experience across desktop, tablet, and mobile devices.
 
-Its design philosophy emphasizes readability, accessibility, and performance while providing an organized way to explore entertainment-related content.
-
----
-
-# ✨ Features
-
-- Premium modern interface
-- Responsive design
-- Fast loading experience
-- Mobile-first layout
-- Optimized navigation
-- Clean component architecture
-- Modern typography
-- Elegant animations
-- Accessibility-focused design
-- SEO-friendly structure
-- Performance-oriented implementation
+The overall design philosophy focuses on simplicity, accessibility, readability, and elegant interaction patterns.
 
 ---
 
-# 🎨 Design System
+# ✨ Highlights
 
-The interface follows a premium dark visual identity inspired by cinematic experiences.
+- 🎬 Premium entertainment-inspired interface
+- 📱 Fully responsive layout
+- ⚡ Fast loading experience
+- 🎨 Modern design system
+- 🌙 Elegant dark theme
+- 🧩 Component-based architecture
+- 🚀 Optimized performance
+- ♿ Accessibility-conscious UI
+- 🔍 SEO-friendly structure
+- 💻 Cross-device compatibility
 
-### Primary Colors
+---
+
+# 🎨 Design Language
+
+The interface follows a premium cinematic design language inspired by modern entertainment platforms.
 
 | Element | Color |
-|----------|---------|
+|---------|---------|
 | Background | `#050505` |
 | Surface | `#0E0E0E` |
-| Cards | `#161616` |
-| Accent | `#FFC107` |
+| Card | `#161616` |
+| Primary Accent | `#FFC107` |
 | Highlight | `#FFD43B` |
-| Text | `#FFFFFF` |
+| Primary Text | `#FFFFFF` |
+| Secondary Text | `#D6D6D6` |
 
 ---
 
@@ -69,26 +69,56 @@ The interface follows a premium dark visual identity inspired by cinematic exper
 
 ---
 
-# 🚀 Local Development
+# 📂 Project Structure
+
+```text
+.
+├── assets/
+│   ├── banner.png
+│   ├── logo.png
+│   └── screenshots/
+│
+├── components/
+├── pages/
+├── public/
+├── styles/
+├── package.json
+├── .env.local
+└── README.md
+```
+
+---
+
+# 🚀 Getting Started
 
 ## Prerequisites
 
+Before running the project, make sure you have:
+
 - Node.js
 - npm
+
+---
 
 ## Installation
 
 ```bash
 npm install
-````
+```
 
-Create a `.env.local` file and add your Gemini API key.
+---
+
+## Environment Variables
+
+Create a `.env.local` file.
 
 ```env
 GEMINI_API_KEY=YOUR_API_KEY
 ```
 
-Run the development server:
+---
+
+## Run Development Server
 
 ```bash
 npm run dev
@@ -96,52 +126,49 @@ npm run dev
 
 ---
 
-# 📂 Project Structure
+# 🌐 Project Website
 
-```
-.
-├── assets/
-├── components/
-├── pages/
-├── public/
-├── styles/
-├── .env.local
-├── package.json
-└── README.md
-```
+Additional project information and public resources are available at:
+
+**https://www.moviebox.com.ph/**
 
 ---
 
-# 🌐 Project Website
+# 📱 Responsive Experience
 
-For additional public information and project updates, visit:
+The interface is optimized for:
 
-https://www.moviebox.com.ph/
+- Desktop
+- Laptop
+- Tablet
+- Android
+- iPhone
+- Modern Browsers
 
 ---
 
 # 🎯 Project Goals
 
-* Create a premium entertainment experience
-* Deliver responsive performance
-* Maintain clean and scalable code
-* Improve accessibility
-* Follow modern UI/UX principles
-* Build an intuitive browsing experience
+- Deliver a premium entertainment interface
+- Build a modern responsive experience
+- Maintain clean and scalable code
+- Improve accessibility
+- Follow modern UI/UX principles
+- Create an enjoyable browsing experience
 
 ---
 
 # 🤝 Contributing
 
-Contributions that improve code quality, performance, accessibility, or user experience are welcome.
+Contributions that improve code quality, accessibility, performance, documentation, or user experience are always welcome.
 
-Please keep all contributions clean, readable, and well documented.
+Please keep all code clean, readable, and well documented.
 
 ---
 
 # 📄 License
 
-This repository is intended for educational and development purposes.
+This project is provided for educational and development purposes.
 
 Please review the applicable license before redistribution or commercial use.
 
@@ -149,7 +176,8 @@ Please review the applicable license before redistribution or commercial use.
 
 <div align="center">
 
-Made with ❤️ for modern web experiences.
+### ⭐ If you found this project useful, consider giving it a star.
+
+Made with ❤️ using Google AI Studio
 
 </div>
-```
