@@ -74,7 +74,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto"
             >
               <a
-                href="https://www.moviesbox.com.co/home/"
+                href="https://www.moviebox.com.ph/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2.5 px-7 py-4 text-base font-bold text-brand-bg bg-gradient-to-r from-brand-primary to-brand-accent rounded-2xl hover:from-brand-primary-hover hover:to-brand-accent/90 shadow-lg shadow-brand-primary/10 hover:shadow-brand-primary/25 transition-all duration-300 transform hover:-translate-y-0.5"
@@ -196,8 +196,13 @@ export default function Hero() {
 
                   {/* Feature Poster */}
                   <div className="relative rounded-2xl overflow-hidden aspect-[16/10] bg-brand-card group shadow-lg border border-brand-surface-sec/60">
+                    <img
+                      src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80"
+                      alt="Dune: Part Two Backdrop"
+                      className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700"
+                      referrerPolicy="no-referrer"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/40 to-transparent z-10"></div>
-                    <div className="absolute inset-0 bg-brand-primary/5 z-0"></div>
                     
                     {/* Simulated visual background for movie poster */}
                     <div className="absolute inset-0 flex flex-col justify-end p-3 z-20 space-y-1">
@@ -215,11 +220,6 @@ export default function Hero() {
                         <Play className="w-3.5 h-3.5 fill-brand-bg stroke-brand-bg translate-x-0.5" />
                       </div>
                     </div>
-
-                    {/* Faux image backdrop using standard abstract styles */}
-                    <div className="w-full h-full bg-gradient-to-tr from-brand-surface-sec to-brand-bg flex items-center justify-center opacity-70">
-                      <Tv className="w-10 h-10 text-brand-primary/10" />
-                    </div>
                   </div>
 
                   {/* Continue Watching Row */}
@@ -231,26 +231,38 @@ export default function Hero() {
 
                     <div className="grid grid-cols-2 gap-2">
                       <div className="bg-brand-card rounded-xl overflow-hidden border border-brand-surface-sec p-1.5 space-y-1.5">
-                        <div className="relative aspect-video rounded-lg bg-gradient-to-br from-brand-surface-sec to-brand-bg flex items-center justify-center overflow-hidden">
-                          <Play className="w-4 h-4 text-brand-primary/80" />
-                          <div className="absolute bottom-0 left-0 right-0 h-1 bg-brand-surface">
+                        <div className="relative aspect-video rounded-lg bg-brand-surface flex items-center justify-center overflow-hidden">
+                          <img
+                            src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80"
+                            alt="Gladiator II"
+                            className="absolute inset-0 w-full h-full object-cover opacity-60"
+                            referrerPolicy="no-referrer"
+                          />
+                          <Play className="relative z-10 w-4 h-4 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" />
+                          <div className="absolute bottom-0 left-0 right-0 h-1 bg-brand-surface z-10">
                             <div className="h-full w-2/3 bg-brand-primary"></div>
                           </div>
                         </div>
-                        <div className="flex flex-col">
+                        <div className="flex flex-col text-left">
                           <span className="font-bold text-[9px] truncate text-white">Gladiator II</span>
                           <span className="text-[7px] text-brand-muted">34m remaining</span>
                         </div>
                       </div>
 
                       <div className="bg-brand-card rounded-xl overflow-hidden border border-brand-surface-sec p-1.5 space-y-1.5">
-                        <div className="relative aspect-video rounded-lg bg-gradient-to-br from-brand-surface-sec to-brand-bg flex items-center justify-center overflow-hidden">
-                          <Play className="w-4 h-4 text-brand-primary/80" />
-                          <div className="absolute bottom-0 left-0 right-0 h-1 bg-brand-surface">
+                        <div className="relative aspect-video rounded-lg bg-brand-surface flex items-center justify-center overflow-hidden">
+                          <img
+                            src="https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=800&q=80"
+                            alt="Spider-Man"
+                            className="absolute inset-0 w-full h-full object-cover opacity-60"
+                            referrerPolicy="no-referrer"
+                          />
+                          <Play className="relative z-10 w-4 h-4 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" />
+                          <div className="absolute bottom-0 left-0 right-0 h-1 bg-brand-surface z-10">
                             <div className="h-full w-1/4 bg-brand-primary"></div>
                           </div>
                         </div>
-                        <div className="flex flex-col">
+                        <div className="flex flex-col text-left">
                           <span className="font-bold text-[9px] truncate text-white">Spider-Man</span>
                           <span className="text-[7px] text-brand-muted">1h 12m left</span>
                         </div>

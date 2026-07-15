@@ -202,7 +202,7 @@ export default function Downloads() {
             <div className="pt-6 mt-6 border-t border-brand-surface space-y-6">
               <a
                 id="direct-download-action-btn"
-                href="https://www.moviesbox.com.co/home/"
+                href="https://www.moviebox.com.ph/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full relative group overflow-hidden bg-gradient-to-r from-brand-primary to-brand-accent hover:from-brand-primary-hover hover:to-brand-accent/95 text-brand-bg font-extrabold py-4 px-6 rounded-2xl shadow-lg shadow-brand-primary/10 hover:shadow-brand-primary/25 transition-all duration-300 transform active:scale-98 flex items-center justify-center gap-3 cursor-pointer select-none"

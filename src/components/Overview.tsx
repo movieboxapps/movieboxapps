@@ -64,7 +64,7 @@ export default function Overview() {
             {/* Action buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4 w-full">
               <a
-                href="https://www.moviesbox.com.co/home/"
+                href="https://www.moviebox.com.ph/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-bold text-white bg-brand-surface hover:bg-brand-card border border-brand-surface-sec hover:border-brand-primary/20 rounded-xl transition-all duration-300 shadow-md group cursor-pointer"

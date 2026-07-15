@@ -59,6 +59,7 @@ export interface MovieRelease {
   genres: string[];
   description: string;
   imageSeed: string;
+  imageUrl?: string;
 }
 
 export interface Plan {

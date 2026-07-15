@@ -197,7 +197,8 @@ export const MOVIES: MovieRelease[] = [
     year: 2025,
     genres: ['SCI-FI', 'ADVENTURE'],
     description: 'Follow the legendary odyssey of Paul Atreides as he integrates with the Fremen, fighting for survival and vengeance against the conspire-driven families who betrayed his house.',
-    imageSeed: 'dune'
+    imageSeed: 'dune',
+    imageUrl: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'movie-2',
@@ -206,7 +207,8 @@ export const MOVIES: MovieRelease[] = [
     year: 2025,
     genres: ['ACTION', 'DRAMA'],
     description: 'Lucius is thrust back into the brutal arenas of ancient Rome, forced to fight in the legendary Colosseum to reclaim his stolen honor and restore the forgotten glory of the empire.',
-    imageSeed: 'gladiator'
+    imageSeed: 'gladiator',
+    imageUrl: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'movie-3',
@@ -215,7 +217,8 @@ export const MOVIES: MovieRelease[] = [
     year: 2024,
     genres: ['ACTION', 'COMEDY'],
     description: 'An unexpected timeline intersection forces the chaotic mercenary and the brooding mutant to combine forces on a multi-universe path to prevent systematic destruction.',
-    imageSeed: 'deadpool'
+    imageSeed: 'deadpool',
+    imageUrl: 'https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'movie-4',
@@ -224,7 +227,8 @@ export const MOVIES: MovieRelease[] = [
     year: 2026,
     genres: ['ANIMATION', 'SCI-FI'],
     description: 'Miles Morales undertakes his final reality-bending mission, navigating complex spider-threads and dangerous multiverses to secure the safety of those he holds dearest.',
-    imageSeed: 'spiderman'
+    imageSeed: 'spiderman',
+    imageUrl: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=800&q=80'
   }
 ];
 

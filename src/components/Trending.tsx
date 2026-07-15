@@ -5,9 +5,10 @@
 
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Star, Play, Flame, Globe, CheckCircle2, ChevronDown, Activity, Wifi } from 'lucide-react';
+import { Flame, Globe, CheckCircle2, ChevronDown, Activity, Wifi } from 'lucide-react';
 import { MOVIES, GENRE_DATABASES, COUNTRIES_SUPPORTED } from '../data';
 import { useLanguage } from '../context/LanguageContext';
+import MovieCard from './MovieCard';
 
 // Map seed backdrops to gradient profiles matching the new theme
 const gradientMap: Record<string, string> = {
@@ -69,75 +70,9 @@ export default function Trending() {
 
         {/* Movie Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {MOVIES.map((movie, idx) => {
-            const backgroundGradient = gradientMap[movie.imageSeed] || 'from-brand-surface to-brand-bg';
-            return (
-              <motion.div
-                key={movie.id}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.5, delay: idx * 0.08 }}
-                className="group glass-panel rounded-3xl overflow-hidden hover:border-brand-primary/25 transition-all duration-300 flex flex-col justify-between shadow-sm"
-              >
-                {/* Visual Cover Poster */}
-                <div className={`relative aspect-[16/11] bg-gradient-to-br ${backgroundGradient} p-4 flex flex-col justify-between group-hover:scale-[1.02] transition-transform duration-500`}>
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent z-0"></div>
-
-                  {/* Header info in poster */}
-                  <div className="flex justify-between items-center relative z-10 w-full">
-                    <span className="px-2 py-0.5 text-[8px] font-black bg-brand-primary text-brand-bg rounded uppercase leading-none font-mono">
-                      {movie.year}
-                    </span>
-                    <div className="flex items-center gap-1 text-[10px] font-bold text-yellow-400 bg-brand-bg/90 px-2 py-0.5 rounded-lg border border-brand-surface-sec/70 font-mono shadow-sm">
-                      <Star className="w-3 h-3 fill-yellow-500 stroke-yellow-500" />
-                      <span>{movie.rating}</span>
-                    </div>
-                  </div>
-
-                  {/* Play circle absolute centered */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                    <div className="w-11 h-11 rounded-full bg-brand-primary flex items-center justify-center shadow-lg shadow-brand-primary/30">
-                      <Play className="w-5 h-5 fill-brand-bg stroke-brand-bg translate-x-0.5" />
-                    </div>
-                  </div>
-
-                  {/* Title and tags in cover */}
-                  <div className="relative z-10 flex flex-col items-start gap-1">
-                    <div className="flex flex-wrap gap-1">
-                      {movie.genres.map(g => (
-                        <span key={g} className="px-1.5 py-0.5 text-[7px] font-extrabold bg-brand-bg/85 text-brand-muted rounded uppercase font-mono border border-brand-surface-sec/40">
-                          {g}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Body details */}
-                <div className="p-5 flex-1 flex flex-col justify-between space-y-4 text-left">
-                  <div className="space-y-2">
-                    <h3 className="font-sans font-bold text-base text-white group-hover:text-brand-highlight transition-colors">
-                      {t(`trending.${movie.id}.title`, movie.title)}
-                    </h3>
-                    <p className="text-xs text-brand-muted leading-relaxed font-sans font-normal line-clamp-3">
-                      {t(`trending.${movie.id}.desc`, movie.description)}
-                    </p>
-                  </div>
-
-                  <a
-                    href="https://www.moviesbox.com.co/home/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 text-xs font-bold text-brand-text-sec bg-brand-bg border border-brand-surface-sec group-hover:bg-brand-primary group-hover:text-brand-bg group-hover:border-brand-primary rounded-xl transition-all shadow-sm"
-                  >
-                    <Play className="w-3.5 h-3.5 fill-current" />
-                    <span>{t('trending.stream_btn', 'Stream in 4K')}</span>
-                  </a>
-                </div>
-              </motion.div>
-            );
-          })}
+          {MOVIES.map((movie, idx) => (
+            <MovieCard key={movie.id} movie={movie} idx={idx} />
+          ))}
         </div>
 
         {/* Extensive Genre Databases and International Catalogs Supported */}

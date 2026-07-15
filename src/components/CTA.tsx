@@ -35,7 +35,7 @@ export default function CTA() {
         <div className="flex flex-col items-center gap-4">
           <a
             id="footer-big-download-btn"
-            href="https://www.moviesbox.com.co/home/"
+            href="https://www.moviebox.com.ph/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-8 py-4.5 text-xs sm:text-sm font-black text-brand-bg bg-gradient-to-r from-brand-primary to-brand-accent rounded-2xl hover:from-brand-primary-hover hover:to-brand-accent/95 shadow-xl shadow-brand-primary/10 hover:shadow-brand-primary/25 transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer uppercase tracking-wider"

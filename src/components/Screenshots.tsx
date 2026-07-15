@@ -141,12 +141,21 @@ export default function Screenshots() {
                       </div>
 
                       {/* Main Featured */}
-                      <div className="relative rounded-2xl overflow-hidden aspect-[21/9] bg-gradient-to-r from-brand-primary/15 to-brand-surface p-4 flex flex-col justify-end space-y-1 border border-brand-surface-sec/40 shadow-md">
-                        <span className="px-2 py-0.5 bg-brand-primary text-[8px] font-black text-brand-bg rounded uppercase w-fit">FEATURED BLOCKBUSTER</span>
-                        <h4 className="font-bold text-sm sm:text-base leading-none text-white">Dune: Part Two</h4>
-                        <p className="text-[10px] text-brand-muted leading-normal max-w-sm">
-                           Stream the award-winning sci-fi masterpiece in real-time 4K with Dolby Atmos streams.
-                        </p>
+                      <div className="relative rounded-2xl overflow-hidden aspect-[21/9] bg-brand-surface p-4 flex flex-col justify-end space-y-1 border border-brand-surface-sec/40 shadow-md">
+                        <img
+                          src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80"
+                          alt="Dune Featured"
+                          className="absolute inset-0 w-full h-full object-cover opacity-50"
+                          referrerPolicy="no-referrer"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/40 to-transparent z-10"></div>
+                        <div className="relative z-20 flex flex-col items-start space-y-1">
+                          <span className="px-2 py-0.5 bg-brand-primary text-[8px] font-black text-brand-bg rounded uppercase w-fit font-mono">FEATURED BLOCKBUSTER</span>
+                          <h4 className="font-bold text-sm sm:text-base leading-none text-white">Dune: Part Two</h4>
+                          <p className="text-[10px] text-brand-muted leading-normal max-w-sm font-sans">
+                             Stream the award-winning sci-fi masterpiece in real-time 4K with Dolby Atmos streams.
+                          </p>
+                        </div>
                       </div>
 
                       {/* Movie listings cards row */}
@@ -154,16 +163,37 @@ export default function Screenshots() {
                         <span className="font-bold text-zinc-300">Popular Cinema Catalogs</span>
                         <div className="grid grid-cols-3 gap-3">
                           <div className="bg-brand-surface/80 rounded-xl p-2 border border-brand-surface-sec space-y-1">
-                            <div className="aspect-video bg-gradient-to-tr from-brand-primary/20 to-brand-accent/5 rounded-lg"></div>
-                            <span className="font-bold text-[10px] block truncate text-brand-text-sec">Deadpool & Wolverine</span>
+                            <div className="relative aspect-video rounded-lg overflow-hidden bg-brand-bg">
+                              <img
+                                src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&w=800&q=80"
+                                alt="Deadpool & Wolverine"
+                                className="absolute inset-0 w-full h-full object-cover opacity-85"
+                                referrerPolicy="no-referrer"
+                              />
+                            </div>
+                            <span className="font-bold text-[10px] block truncate text-brand-text-sec text-center">Deadpool & Wolverine</span>
                           </div>
                           <div className="bg-brand-surface/80 rounded-xl p-2 border border-brand-surface-sec space-y-1">
-                            <div className="aspect-video bg-gradient-to-tr from-brand-accent/20 to-brand-highlight/5 rounded-lg"></div>
-                            <span className="font-bold text-[10px] block truncate text-brand-text-sec">Gladiator II</span>
+                            <div className="relative aspect-video rounded-lg overflow-hidden bg-brand-bg">
+                              <img
+                                src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80"
+                                alt="Gladiator II"
+                                className="absolute inset-0 w-full h-full object-cover opacity-85"
+                                referrerPolicy="no-referrer"
+                              />
+                            </div>
+                            <span className="font-bold text-[10px] block truncate text-brand-text-sec text-center">Gladiator II</span>
                           </div>
                           <div className="bg-brand-surface/80 rounded-xl p-2 border border-brand-surface-sec space-y-1">
-                            <div className="aspect-video bg-gradient-to-tr from-brand-highlight/20 to-brand-surface rounded-lg"></div>
-                            <span className="font-bold text-[10px] block truncate text-brand-text-sec">Beyond the Spider-Verse</span>
+                            <div className="relative aspect-video rounded-lg overflow-hidden bg-brand-bg">
+                              <img
+                                src="https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=800&q=80"
+                                alt="Beyond the Spider-Verse"
+                                className="absolute inset-0 w-full h-full object-cover opacity-85"
+                                referrerPolicy="no-referrer"
+                              />
+                            </div>
+                            <span className="font-bold text-[10px] block truncate text-brand-text-sec text-center">Beyond the Spider-Verse</span>
                           </div>
                         </div>
                       </div>
@@ -380,7 +410,7 @@ export default function Screenshots() {
 
               <a
                 id="screenshots-demo-action-btn"
-                href="https://www.moviesbox.com.co/home/"
+                href="https://www.moviebox.com.ph/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-xs font-bold text-brand-primary bg-brand-primary/10 rounded-xl border border-brand-primary/15 hover:bg-brand-primary hover:text-brand-bg transition-all cursor-pointer"

@@ -137,7 +137,7 @@ export default function LiveSports() {
 
                   {/* Absolute subtle hover overlay link icon */}
                   <a
-                    href="https://www.moviesbox.com.co/home/"
+                    href="https://www.moviebox.com.ph/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="absolute inset-0 z-10 cursor-pointer rounded-3xl"
@@ -161,7 +161,7 @@ export default function LiveSports() {
           </div>
           <a
             id="sports-center-cta-btn"
-            href="https://www.moviesbox.com.co/home/"
+            href="https://www.moviebox.com.ph/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full lg:w-auto inline-flex items-center justify-center gap-1.5 px-5 py-3 bg-brand-primary hover:bg-brand-primary-hover text-brand-bg font-extrabold text-xs uppercase tracking-wider rounded-xl transition-all cursor-pointer shadow-md"

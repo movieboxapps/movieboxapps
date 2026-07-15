@@ -89,31 +89,31 @@ export default function Header({ activeSection }: HeaderProps) {
       id="main-header"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-brand-bg/85 backdrop-blur-md border-b border-brand-surface-sec/60 shadow-lg shadow-black/60 py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-brand-bg/90 backdrop-blur-md border-b border-brand-surface-sec/60 shadow-lg shadow-black/60 py-3'
+          : 'bg-transparent py-4 sm:py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#home" onClick={(e) => handleScrollTo(e, '#home')} className="flex items-center gap-2.5 group">
-            <div className="relative w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center shadow-md shadow-brand-primary/20 group-hover:scale-105 transition-all duration-300">
-              <span className="font-sans font-black text-xl text-brand-bg tracking-tighter">M</span>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-brand-highlight rounded-full border-2 border-brand-bg animate-pulse flex items-center justify-center">
-                <span className="text-[6px] text-white font-black">v4</span>
+        <div className="flex items-center justify-between gap-4">
+          {/* Logo - Left aligned */}
+          <a href="#home" onClick={(e) => handleScrollTo(e, '#home')} className="flex items-center gap-2 group shrink-0">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center shadow-md shadow-brand-primary/20 group-hover:scale-105 transition-all duration-300">
+              <span className="font-sans font-black text-lg sm:text-xl text-brand-bg tracking-tighter">M</span>
+              <div className="absolute -top-1 -right-1 w-3.5 h-3.5 sm:w-4 sm:h-4 bg-brand-highlight rounded-full border-2 border-brand-bg flex items-center justify-center">
+                <span className="text-[5px] sm:text-[6px] text-white font-black">v4</span>
               </div>
             </div>
-            <div className="flex flex-col">
-              <div className="flex items-center gap-1.5">
-                <span className="font-sans font-extrabold text-lg tracking-tight text-white group-hover:text-brand-highlight transition-colors">MovieBox</span>
-                <span className="px-1.5 py-0.5 text-[9px] font-bold bg-brand-primary/10 text-brand-primary border border-brand-primary/20 rounded-md">PRO</span>
+            <div className="flex flex-col text-left">
+              <div className="flex items-center gap-1.5 leading-none">
+                <span className="font-sans font-black text-sm sm:text-base tracking-tight text-white group-hover:text-brand-highlight transition-colors">MovieBox</span>
+                <span className="px-1 py-0.5 text-[8px] sm:text-[9px] font-bold bg-brand-primary/10 text-brand-primary border border-brand-primary/20 rounded-md">PRO</span>
               </div>
-              <span className="text-[9px] text-brand-muted tracking-widest font-mono uppercase">Streaming Node</span>
+              <span className="text-[7px] sm:text-[9px] text-brand-muted tracking-widest font-mono uppercase mt-0.5">Streaming Node</span>
             </div>
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-1 bg-brand-surface/60 border border-brand-surface-sec/40 p-1 rounded-xl">
+          {/* Desktop Navigation - Center aligned, hidden below lg */}
+          <nav className="hidden lg:flex items-center gap-0.5 bg-brand-surface/60 border border-brand-surface-sec/40 p-1 rounded-xl">
             {navItems.map((item) => {
               const isActive = activeSection === item.href.slice(1);
               return (
@@ -134,10 +134,10 @@ export default function Header({ activeSection }: HeaderProps) {
             })}
           </nav>
 
-          {/* Action Button & Language Switcher Dropdown */}
-          <div className="hidden xl:flex items-center gap-3">
-            {/* Theme Selector Dropdown */}
-            <div className="relative" ref={themeDropdownRef}>
+          {/* Actions & Switchers Area - Right aligned */}
+          <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3 shrink-0">
+            {/* Theme Selector (Desktop & Tablet: visible on md and up) */}
+            <div className="hidden md:block relative" ref={themeDropdownRef}>
               <button
                 id="theme-selector-btn"
                 onClick={() => setIsThemeOpen(!isThemeOpen)}
@@ -152,7 +152,7 @@ export default function Header({ activeSection }: HeaderProps) {
               {isThemeOpen && (
                 <div className="absolute right-0 mt-2 w-64 bg-brand-card/95 border border-brand-surface-sec rounded-xl shadow-xl shadow-black/80 backdrop-blur-md overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200 z-50">
                   <div className="p-2 border-b border-brand-surface-sec/60">
-                    <span className="text-[9px] font-black text-brand-muted font-mono uppercase tracking-wider block">Select Interface Skin</span>
+                    <span className="text-[9px] font-black text-brand-muted font-mono uppercase tracking-wider block text-left">Select Interface Skin</span>
                   </div>
                   <div className="p-1.5 space-y-1">
                     {Object.entries(THEMES).map(([key, val]) => {
@@ -192,15 +192,18 @@ export default function Header({ activeSection }: HeaderProps) {
               )}
             </div>
 
-            {/* Language Selector Dropdown */}
+            {/* Language Selector (Visible on ALL screens for perfect localization access) */}
             <div className="relative" ref={dropdownRef}>
               <button
                 id="language-selector-btn"
                 onClick={() => setIsLangOpen(!isLangOpen)}
-                className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-brand-muted hover:text-white bg-brand-surface/60 hover:bg-brand-surface border border-brand-surface-sec hover:border-brand-primary/20 rounded-xl transition-all cursor-pointer"
+                className="flex items-center gap-1 sm:gap-1.5 px-2 py-1.5 sm:px-3 text-xs font-semibold text-brand-muted hover:text-white bg-brand-surface/60 hover:bg-brand-surface border border-brand-surface-sec hover:border-brand-primary/20 rounded-xl transition-all cursor-pointer"
+                title="Select Language"
               >
                 <Globe className="w-3.5 h-3.5 text-brand-primary" />
-                <span className="font-mono">{currentLang.flag} {currentLang.code.toUpperCase()}</span>
+                <span className="font-mono text-[10px] sm:text-xs">
+                  {currentLang.flag} <span className="hidden sm:inline-block ml-0.5">{currentLang.code.toUpperCase()}</span>
+                </span>
                 <ChevronDown className={`w-3 h-3 text-brand-muted transition-transform duration-200 ${isLangOpen ? 'rotate-180' : ''}`} />
               </button>
 
@@ -218,7 +221,7 @@ export default function Header({ activeSection }: HeaderProps) {
                             setLocale(lang.code);
                             setIsLangOpen(false);
                           }}
-                          className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-left text-xs font-medium transition-all ${
+                          className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-left text-xs font-medium transition-all cursor-pointer ${
                             isSelected
                               ? 'bg-brand-primary/10 text-brand-primary border border-brand-primary/10'
                               : 'text-brand-muted hover:text-white hover:bg-brand-surface-sec/40'
@@ -237,37 +240,40 @@ export default function Header({ activeSection }: HeaderProps) {
               )}
             </div>
 
-            <div className="flex items-center gap-1.5 text-[10px] text-brand-muted bg-brand-surface/80 px-2.5 py-1.5 rounded-lg border border-brand-surface-sec">
+            {/* Certified safe badge (Desktop only: visible on lg and up) */}
+            <div className="hidden lg:flex items-center gap-1.5 text-[10px] text-brand-muted bg-brand-surface/80 px-2.5 py-1.5 rounded-lg border border-brand-surface-sec">
               <ShieldCheck className="w-3.5 h-3.5 text-brand-primary" />
               <span className="font-mono">{t('nav.certified', 'v4.8.2 Certified')}</span>
             </div>
+
+            {/* Download Action Button (Desktop & Tablet: visible on md and up) */}
             <a
               id="header-download-btn"
-              href="https://www.moviesbox.com.co/home/"
+              href="https://www.moviebox.com.ph/"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-bold text-brand-bg bg-gradient-to-r from-brand-primary to-brand-accent rounded-xl hover:from-brand-primary-hover hover:to-brand-accent/90 shadow-md shadow-brand-primary/10 hover:shadow-brand-primary/25 hover:scale-[1.02] transition-all duration-300"
+              className="hidden md:inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-bold text-brand-bg bg-gradient-to-r from-brand-primary to-brand-accent rounded-xl hover:from-brand-primary-hover hover:to-brand-accent/90 shadow-md shadow-brand-primary/10 hover:shadow-brand-primary/25 hover:scale-[1.02] transition-all duration-300"
             >
               <Download className="w-3.5 h-3.5" />
               <span>{t('nav.download', 'Download APK')}</span>
             </a>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            id="mobile-menu-toggle"
-            onClick={() => setIsOpen(!isOpen)}
-            className="xl:hidden p-2 text-brand-muted hover:text-white hover:bg-brand-surface-sec/50 rounded-xl transition-all animate-pulse"
-            aria-label="Toggle Menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+            {/* Mobile Menu Toggle Button (Visible below lg) */}
+            <button
+              id="mobile-menu-toggle"
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-1.5 sm:p-2 text-brand-muted hover:text-white hover:bg-brand-surface-sec/50 rounded-xl transition-all"
+              aria-label="Toggle Menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile Navigation Drawer */}
       {isOpen && (
-        <div className="xl:hidden absolute top-full left-0 right-0 max-h-[85vh] overflow-y-auto glass-panel backdrop-blur-2xl animate-in fade-in slide-in-from-top-4 duration-200">
+        <div className="lg:hidden absolute top-full left-0 right-0 max-h-[85vh] overflow-y-auto glass-panel backdrop-blur-2xl animate-in fade-in slide-in-from-top-4 duration-200 shadow-2xl border-t border-brand-surface-sec/40">
           <div className="px-4 pt-2 pb-6 space-y-2">
             {/* Mobile Language Selector */}
             <div className="py-3 border-b border-brand-surface-sec/60 space-y-2 px-2">
@@ -277,7 +283,10 @@ export default function Header({ activeSection }: HeaderProps) {
                   <button
                     key={lang.code}
                     id={`mobile-lang-${lang.code}`}
-                    onClick={() => setLocale(lang.code)}
+                    onClick={() => {
+                      setLocale(lang.code);
+                      setIsOpen(false);
+                    }}
                     className={`px-2.5 py-1 rounded-lg text-[10px] font-bold transition-all cursor-pointer ${
                       locale === lang.code
                         ? 'bg-brand-primary/15 text-brand-primary border border-brand-primary/20'
@@ -301,7 +310,10 @@ export default function Header({ activeSection }: HeaderProps) {
                     <button
                       key={key}
                       id={`mobile-theme-btn-${key}`}
-                      onClick={() => setTheme(key as ThemeType)}
+                      onClick={() => {
+                        setTheme(key as ThemeType);
+                        setIsOpen(false);
+                      }}
                       className={`flex flex-col items-start p-2 rounded-xl text-left border transition-all cursor-pointer ${
                         isSelected
                           ? 'bg-brand-primary/10 text-brand-primary border-brand-primary/20'
@@ -319,24 +331,28 @@ export default function Header({ activeSection }: HeaderProps) {
               </div>
             </div>
 
-            {navItems.map((item) => {
-              const isActive = activeSection === item.href.slice(1);
-              return (
-                <a
-                  key={item.href}
-                  id={`mobile-nav-item-${item.href.slice(1)}`}
-                  href={item.href}
-                  onClick={(e) => handleScrollTo(e, item.href)}
-                  className={`block px-4 py-3 rounded-xl text-sm font-semibold tracking-wide transition-all ${
-                    isActive
-                      ? 'text-brand-primary bg-brand-primary/5 border-l-4 border-brand-primary pl-3'
-                      : 'text-brand-muted hover:text-white hover:bg-brand-surface-sec/50'
-                  }`}
-                >
-                  {item.name}
-                </a>
-              );
-            })}
+            {/* Mobile Menu Links */}
+            <div className="py-2 space-y-1">
+              {navItems.map((item) => {
+                const isActive = activeSection === item.href.slice(1);
+                return (
+                  <a
+                    key={item.href}
+                    id={`mobile-nav-item-${item.href.slice(1)}`}
+                    href={item.href}
+                    onClick={(e) => handleScrollTo(e, item.href)}
+                    className={`block px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wide transition-all text-left ${
+                      isActive
+                        ? 'text-brand-primary bg-brand-primary/5 border-l-4 border-brand-primary pl-3'
+                        : 'text-brand-muted hover:text-white hover:bg-brand-surface-sec/50'
+                    }`}
+                  >
+                    {item.name}
+                  </a>
+                );
+              })}
+            </div>
+
             <div className="pt-4 border-t border-brand-surface-sec/60 flex flex-col gap-3">
               <div className="flex items-center justify-between px-4 text-xs text-brand-muted font-mono">
                 <span>Active Protection</span>
@@ -347,10 +363,10 @@ export default function Header({ activeSection }: HeaderProps) {
               </div>
               <a
                 id="mobile-download-btn"
-                href="https://www.moviesbox.com.co/home/"
+                href="https://www.moviebox.com.ph/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold text-brand-bg bg-gradient-to-r from-brand-primary to-brand-accent rounded-xl"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 text-xs sm:text-sm font-bold text-brand-bg bg-gradient-to-r from-brand-primary to-brand-accent rounded-xl"
               >
                 <Download className="w-4 h-4" />
                 <span>{t('hero.latest_download_size', 'Download Latest APK (32.4MB)')}</span>
