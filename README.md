@@ -178,6 +178,6 @@ Please review the applicable license before redistribution or commercial use.
 
 ### ⭐ If you found this project useful, consider giving it a star.
 
-Made with ❤️ using Google AI Studio
+Made with ❤️ By MovieBox PH
 
 </div>
