@@ -1,20 +1,155 @@
+````markdown
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+
+<img src="assets/banner.png" alt="MovieBox Banner" width="100%" />
+
+# 🎬 MovieBox Web Experience
+
+### Premium Streaming Platform Interface • Modern UI • Responsive Design
+
+[![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)]()
+[![Version](https://img.shields.io/badge/Version-Latest-orange?style=for-the-badge)]()
+[![License](https://img.shields.io/badge/License-Private-black?style=for-the-badge)]()
+
 </div>
 
-# Run and deploy your AI Studio app
+---
 
-This contains everything you need to run your app locally.
+# 📖 Overview
 
-View your app in AI Studio: https://ai.studio/apps/7ddbe383-7cc8-4c64-8274-806c2afc8879
+MovieBox Web Experience is a modern entertainment-focused web application designed with performance, usability, and responsive design in mind.
 
-## Run Locally
+The project focuses on delivering a clean, premium user interface, intuitive navigation, and a smooth browsing experience across desktop, tablet, and mobile devices.
 
-**Prerequisites:**  Node.js
+Its design philosophy emphasizes readability, accessibility, and performance while providing an organized way to explore entertainment-related content.
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+# ✨ Features
+
+- Premium modern interface
+- Responsive design
+- Fast loading experience
+- Mobile-first layout
+- Optimized navigation
+- Clean component architecture
+- Modern typography
+- Elegant animations
+- Accessibility-focused design
+- SEO-friendly structure
+- Performance-oriented implementation
+
+---
+
+# 🎨 Design System
+
+The interface follows a premium dark visual identity inspired by cinematic experiences.
+
+### Primary Colors
+
+| Element | Color |
+|----------|---------|
+| Background | `#050505` |
+| Surface | `#0E0E0E` |
+| Cards | `#161616` |
+| Accent | `#FFC107` |
+| Highlight | `#FFD43B` |
+| Text | `#FFFFFF` |
+
+---
+
+# 🛠 Technology Stack
+
+- HTML5
+- CSS3
+- JavaScript
+- Node.js
+- Gemini API
+- Google AI Studio
+
+---
+
+# 🚀 Local Development
+
+## Prerequisites
+
+- Node.js
+- npm
+
+## Installation
+
+```bash
+npm install
+````
+
+Create a `.env.local` file and add your Gemini API key.
+
+```env
+GEMINI_API_KEY=YOUR_API_KEY
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+# 📂 Project Structure
+
+```
+.
+├── assets/
+├── components/
+├── pages/
+├── public/
+├── styles/
+├── .env.local
+├── package.json
+└── README.md
+```
+
+---
+
+# 🌐 Project Website
+
+For additional public information and project updates, visit:
+
+https://www.moviebox.com.ph/
+
+---
+
+# 🎯 Project Goals
+
+* Create a premium entertainment experience
+* Deliver responsive performance
+* Maintain clean and scalable code
+* Improve accessibility
+* Follow modern UI/UX principles
+* Build an intuitive browsing experience
+
+---
+
+# 🤝 Contributing
+
+Contributions that improve code quality, performance, accessibility, or user experience are welcome.
+
+Please keep all contributions clean, readable, and well documented.
+
+---
+
+# 📄 License
+
+This repository is intended for educational and development purposes.
+
+Please review the applicable license before redistribution or commercial use.
+
+---
+
+<div align="center">
+
+Made with ❤️ for modern web experiences.
+
+</div>
+```
