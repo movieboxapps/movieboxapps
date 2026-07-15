@@ -1,0 +1,6 @@
+{
+  "name": "MovieBox 2026",
+  "description": "MovieBox 2026 — Premium Entertainment Platform Landing Page. Secure downloads, live sports, movie releases, compatibility specifications, and comprehensive installation guides.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
